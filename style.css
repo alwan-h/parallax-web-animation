@@ -1,0 +1,98 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(180, 149, 109);
+}
+
+.frame {
+  width: 1000px;
+  height: 600px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 6px 28px 2px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 6px 28px 2px rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 6px 28px 2px rgba(0, 0, 0, 0.22);
+  display: flex;
+  justify-content: center;
+}
+
+.frame img {
+  position: absolute;
+  width: 100%;
+  top: -50px;
+}
+
+.layer-1 {
+  /* top: 250px; */
+  animation: layer-1-anim 3s;
+}
+
+.layer-2 {
+  /* top: 150px; */
+  animation: layer-2-anim 3s;
+}
+
+.layer-3 {
+  /* top: 50px; */
+  animation: layer-3-anim 3s;
+}
+
+.frame h1 {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  bottom: 130px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  animation: overlay-anim 3s;
+  bottom: 100%;
+}
+
+@keyframes layer-1-anim {
+  0% {
+    top: 250px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+
+@keyframes layer-2-anim {
+  0% {
+    top: 150px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+
+@keyframes layer-3-anim {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: -50px;
+  }
+}
+
+@keyframes overlay-anim {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: 100%;
+  }
+}
